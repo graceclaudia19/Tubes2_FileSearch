@@ -1,0 +1,17 @@
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\bin\Debug\net6.0-windows\test.exe
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\bin\Debug\net6.0-windows\test.deps.json
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\bin\Debug\net6.0-windows\test.runtimeconfig.json
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\bin\Debug\net6.0-windows\test.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\bin\Debug\net6.0-windows\test.pdb
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.csproj.AssemblyReference.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.Form1.resources
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.csproj.GenerateResource.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.GeneratedMSBuildEditorConfig.editorconfig
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.AssemblyInfoInputs.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.AssemblyInfo.cs
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.csproj.CoreCompileInputs.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\refint\test.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.pdb
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.genruntimeconfig.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\ref\test.dll
