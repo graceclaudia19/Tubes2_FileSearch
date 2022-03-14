@@ -15,3 +15,25 @@ D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\refint\
 D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.pdb
 D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\test.genruntimeconfig.cache
 D:\IF\Semester4\stima\tubes2\TUBESSSS\test\test\obj\Debug\net6.0-windows\ref\test.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\test.exe
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\test.deps.json
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\test.runtimeconfig.json
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\test.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\test.pdb
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.csproj.AssemblyReference.cache
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.Form1.resources
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.csproj.GenerateResource.cache
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.AssemblyInfoInputs.cache
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.AssemblyInfo.cs
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.csproj.CoreCompileInputs.cache
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.csproj.CopyComplete
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\refint\test.dll
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.pdb
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\test.genruntimeconfig.cache
+C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\sample\test\obj\Debug\net6.0-windows\ref\test.dll

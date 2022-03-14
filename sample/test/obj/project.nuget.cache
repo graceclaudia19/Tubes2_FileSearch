@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OZcX1YBg9tyFz7Cy3wxvOnSnQkcS8Q1qulLDNXb7bhHGh5kaewmmjc1fQCRXGfvJhTay3FIEY2us8MTfieD36w==",
+  "dgSpecHash": "HVdwljT4zBHAsqm7eXIpCGYi/lXd3D9C5JOL71kcT0buHM/Gd8LVuUDs5Q2auTGeEyMWDgJAYTsmYtFuqcahCA==",
   "success": true,
-  "projectFilePath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\test\\test\\test.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\sample\\test\\test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+  ],
   "logs": []
 }

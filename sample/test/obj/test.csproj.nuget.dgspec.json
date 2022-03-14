@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\test\\test\\test.csproj": {}
+    "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\sample\\test\\test.csproj": {}
   },
   "projects": {
-    "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\test\\test\\test.csproj": {
+    "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\sample\\test\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\test\\test\\test.csproj",
+        "projectUniqueName": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\sample\\test\\test.csproj",
         "projectName": "test",
-        "projectPath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\test\\test\\test.csproj",
-        "packagesPath": "C:\\Users\\grace\\.nuget\\packages\\",
-        "outputPath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\test\\test\\obj\\",
+        "projectPath": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\sample\\test\\test.csproj",
+        "packagesPath": "C:\\Users\\Rania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\sample\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\grace\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rania\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,24 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "AutomaticGraphLayout": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "AutomaticGraphLayout.Drawing": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "AutomaticGraphLayout.GraphViewerGDI": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "AutomaticGraphLayout.WpfGraphControl": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
