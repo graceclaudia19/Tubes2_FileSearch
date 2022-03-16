@@ -43,6 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -163,7 +164,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(530, 70);
+            this.label7.Location = new System.Drawing.Point(528, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 31);
             this.label7.TabIndex = 11;
@@ -191,11 +192,22 @@
             this.textBox2.TabIndex = 13;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Location = new System.Drawing.Point(360, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(411, 334);
+            this.panel1.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
@@ -219,7 +231,6 @@
         }
 
         #endregion
-
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private CheckBox checkBox1;
@@ -235,5 +246,6 @@
         private Label label7;
         private Button button2;
         private TextBox textBox2;
+        private Panel panel1;
     }
 }
