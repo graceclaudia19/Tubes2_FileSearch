@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "IC/1vSnLkNv4A0RhLo/5Ozez0tppcG2vy5o7fsqZivdtL9uVgjtsCMHWCD6bkqb66j8Cu3sZ2q+9tZ+lb3WrHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sarah Azka A\\Documents\\if\\sem-4\\tubes\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sarah Azka A\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Sarah Azka A\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Sarah Azka A\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Sarah Azka A\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
