@@ -1,5 +1,8 @@
 
 
+using System.Windows.Media;
+using Color = System.Drawing.Color;
+
 namespace dagorlz
 {
     public partial class dagorlz : Form
@@ -68,7 +71,7 @@ namespace dagorlz
                 if (i != 0) await Task.Delay(800);
                 graph.AddEdge(temp[i], temp[i+1]);
                 viewer.Graph = graph;
-                viewer.OutsideAreaBrush = Brushes.White;
+                //viewer.OutsideAreaBrush = Brushes.White;
                 graphPanel.SuspendLayout();
                 viewer.Dock = System.Windows.Forms.DockStyle.Fill;
                 graphPanel.Controls.Add(viewer);
@@ -146,6 +149,21 @@ namespace dagorlz
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.BackColor = System.Drawing.Color.FromArgb(219, 228, 216);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
