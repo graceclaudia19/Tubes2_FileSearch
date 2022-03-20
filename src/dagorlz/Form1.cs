@@ -47,7 +47,7 @@ namespace dagorlz
             }
             else
             {
-                inputName.BackColor = System.Drawing.SystemColors.Desktop;
+                inputName.BackColor = System.Drawing.SystemColors.Info;
             }
         }
 
@@ -91,6 +91,63 @@ namespace dagorlz
             // viewer.Dock = System.Windows.Forms.DockStyle.Fill;
             // graphPanel.Controls.Add(viewer);
             // graphPanel.ResumeLayout();
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDetail2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label8.Text = trackBar1.Value.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chosenDir_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void graphPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
