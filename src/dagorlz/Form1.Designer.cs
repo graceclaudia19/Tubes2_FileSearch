@@ -67,7 +67,7 @@
             this.selectDir.Name = "selectDir";
             this.selectDir.Size = new System.Drawing.Size(124, 29);
             this.selectDir.TabIndex = 0;
-            this.selectDir.Text = "Select Directory ...";
+            this.selectDir.Text = "Select Directory";
             this.selectDir.UseVisualStyleBackColor = false;
             this.selectDir.Click += new System.EventHandler(this.selectDir_Click);
             // 
@@ -287,6 +287,7 @@
             this.hyperlink.TabIndex = 28;
             this.hyperlink.TabStop = true;
             this.hyperlink.Text = "hyperlink";
+            this.hyperlink.Visible = false;
             // 
             // algorithmtime
             // 

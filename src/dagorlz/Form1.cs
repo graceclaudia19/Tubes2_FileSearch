@@ -20,7 +20,6 @@ namespace dagorlz
         private void selectDir_Click(object sender, EventArgs e)
         {
             folderBrowserDialog.ShowDialog();
-
             chosenDir.Text = folderBrowserDialog.SelectedPath.ToString();
             chosenDir.BackColor = System.Drawing.SystemColors.Control;
         }
@@ -32,14 +31,26 @@ namespace dagorlz
 
         private void searchBFS_Click(object sender, EventArgs e)
         {
-            searchBFS.Text = "OK";
-            createGraph();
+            if (this.chosenDir.BackColor == System.Drawing.SystemColors.Info || this.inputName.BackColor == System.Drawing.SystemColors.Info)
+            {
+                MessageBox.Show("Make sure to set start directory and target filename", "BFS Search Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                createGraph();
+            }
         }
 
         private void searchDFS_Click(object sender, EventArgs e)
         {
-            searchDFS.Text = "OK";
-            createGraph();
+            if (this.chosenDir.BackColor == System.Drawing.SystemColors.Info || this.inputName.BackColor == System.Drawing.SystemColors.Info)
+            {
+                MessageBox.Show("Make sure to set start directory and target filename", "DFS Search Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                createGraph();
+            }
         }
 
         private void inputName_TextChanged(object sender, EventArgs e)
@@ -54,48 +65,51 @@ namespace dagorlz
             }
         }
 
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            createGraph();
-        }
         private async void createGraph()
         {
             graphPanel.Controls.Clear();
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-            //create a graph object 
+
+            this.algorithmtime.Text = "0";
+            this.hyperlink.Visible = false;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-            //create the graph content 
-            string[] temp = { "A", "B", "C", "D" };
-            for (int i = 0; i < temp.Length - 1; i++)
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            
+            string start = this.chosenDir.Text; // starting directory
+            bool check = this.checkAll.Checked; // check all occurence
+
+
+
+            /* IMPLEMENT BFS/DFS HERE */
+
+
+
+            // iterator (show graph creation procss)
+            string[] creationPath = { "A", "B", "C", "D" }; // dummy BFS/DFS path
+            for (int i = 0; i < creationPath.Length - 1; i++)
             {
-                if (i != 0) await Task.Delay(800);
-                graph.AddEdge(temp[i], temp[i+1]);
+                if (i != 0) await Task.Delay(this.trackBar1.Value);
+                graph.AddEdge(creationPath[i], creationPath[i + 1]);
                 viewer.Graph = graph;
-                //viewer.OutsideAreaBrush = Brushes.White;
+                viewer.OutsideAreaBrush = System.Drawing.Brushes.Transparent;
                 graphPanel.SuspendLayout();
                 viewer.Dock = System.Windows.Forms.DockStyle.Fill;
                 graphPanel.Controls.Add(viewer);
             }
-            graphPanel.ResumeLayout();
-            // graph.AddEdge("A", "B");
-            // graph.AddEdge("B", "C");
-            // graph.AddEdge("B", "D");
-            // graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
-            // graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
-            // graph.FindNode("B").Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
-            // Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
-            // c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
-            // c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
-            // //bind the graph to the viewer 
-            // viewer.Graph = graph;
-            // viewer.OutsideAreaBrush = Brushes.White;
-            // //associate the viewer with the form
-            // graphPanel.SuspendLayout();
-            // viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            // graphPanel.Controls.Add(viewer);
-            // graphPanel.ResumeLayout();
-        }
 
+            // recoloring nodes after graph creation
+            string[] result = { "A", "B", "D" }; // dummy BFS/DFS result
+            for (int i = 0; i < result.Length - 1; i ++)
+            {
+                Microsoft.Msagl.Drawing.Node node = graph.FindNode(result[i]);
+                node.Attr.FillColor = Microsoft.Msagl.Drawing.Color.ForestGreen;
+            }
+            watch.Stop();
+
+            this.algorithmtime.Text = watch.ElapsedMilliseconds.ToString();
+            this.hyperlink.Visible = true;
+            graphPanel.ResumeLayout();
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -166,6 +180,11 @@ namespace dagorlz
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void dummySearchMethod(bool checkAll, System.Windows.Forms.Panel graphPanel)
+        {
+            
         }
     }
 }
