@@ -115,23 +115,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sarah Azka A\\.nuget\\packages\\": {}
+    "C:\\Users\\grace\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sarah Azka A\\Documents\\if\\sem-4\\tubes\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
+      "projectUniqueName": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
       "projectName": "dagorlz",
-      "projectPath": "C:\\Users\\Sarah Azka A\\Documents\\if\\sem-4\\tubes\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
-      "packagesPath": "C:\\Users\\Sarah Azka A\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sarah Azka A\\Documents\\if\\sem-4\\tubes\\Tubes2_FileSearch\\src\\dagorlz\\obj\\",
+      "projectPath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
+      "packagesPath": "C:\\Users\\grace\\.nuget\\packages\\",
+      "outputPath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sarah Azka A\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\grace\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},

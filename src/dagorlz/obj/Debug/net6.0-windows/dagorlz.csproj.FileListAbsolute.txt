@@ -62,3 +62,26 @@ C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\dagorlz\obj\Debug\
 C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.genruntimeconfig.cache
 C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\dagorlz.pdb
 C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\ref\dagorlz.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\dagorlz.exe
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\dagorlz.deps.json
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\dagorlz.runtimeconfig.json
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\dagorlz.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\dagorlz.pdb
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.csproj.AssemblyReference.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.dagorlz.resources
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.Properties.Resources.resources
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.csproj.GenerateResource.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.GeneratedMSBuildEditorConfig.editorconfig
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.AssemblyInfoInputs.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.AssemblyInfo.cs
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.csproj.CoreCompileInputs.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.csproj.CopyComplete
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\refint\dagorlz.dll
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.pdb
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\dagorlz.genruntimeconfig.cache
+D:\IF\Semester4\stima\tubes2\TUBESSSS\Tubes2_FileSearch\src\dagorlz\obj\Debug\net6.0-windows\ref\dagorlz.dll

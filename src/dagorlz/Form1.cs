@@ -76,11 +76,12 @@ namespace dagorlz
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             
             string start = this.chosenDir.Text; // starting directory
-            bool check = this.checkAll.Checked; // check all occurence
-
+            bool checkAllOccur = this.checkAll.Checked; // check all occurence
+            string fileToSearch = this.inputName.Text; // file to search
 
 
             /* IMPLEMENT BFS/DFS HERE */
+            
 
 
 
