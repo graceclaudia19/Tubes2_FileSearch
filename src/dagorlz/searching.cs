@@ -75,7 +75,7 @@ namespace dagorlz
                 }
                 string[] otherDir = Directory.GetDirectories(startDir);
                 foreach (string dir in otherDir){
-                    res.Enqueue(dir);
+                    q.Enqueue(dir);
                 }
             }
             return output.ToArray();
@@ -86,12 +86,12 @@ namespace dagorlz
         // for testing purpose
         public static void Main(string[] args)
         {
-            // // DFS testing
-            // string[] resultDFS = DFS("testFolder", "found.txt", false);
-            // foreach (string res in resultDFS)
-            // {
-            //     Console.WriteLine(res);
-            // }
+            // DFS testing
+            string[] resultDFS = DFS("testFolder", "found.txt", false);
+            foreach (string res in resultDFS)
+            {
+                Console.WriteLine(res);
+            }
 
             // // BFS testing
             // string[] resultBFS = BFS("testFolder", "found.txt", true);
