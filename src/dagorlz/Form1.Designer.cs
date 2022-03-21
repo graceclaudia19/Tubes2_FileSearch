@@ -48,7 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.hyperlink = new System.Windows.Forms.LinkLabel();
-            this.algorithmtime = new System.Windows.Forms.Label();
+            this.algorithmTime = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -207,9 +207,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(51, 325);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 25);
+            this.label1.Size = new System.Drawing.Size(253, 25);
             this.label1.TabIndex = 17;
-            this.label1.Text = "4. Graph speed interval";
+            this.label1.Text = "4. Input graph speed interval";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // trackBar1
@@ -289,17 +289,17 @@
             this.hyperlink.Text = "hyperlink";
             this.hyperlink.Visible = false;
             // 
-            // algorithmtime
+            // algorithmTime
             // 
-            this.algorithmtime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.algorithmtime.AutoSize = true;
-            this.algorithmtime.BackColor = System.Drawing.Color.Transparent;
-            this.algorithmtime.Location = new System.Drawing.Point(415, 377);
-            this.algorithmtime.Name = "algorithmtime";
-            this.algorithmtime.Size = new System.Drawing.Size(17, 20);
-            this.algorithmtime.TabIndex = 29;
-            this.algorithmtime.Text = "0";
-            this.algorithmtime.Click += new System.EventHandler(this.label7_Click);
+            this.algorithmTime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.algorithmTime.AutoSize = true;
+            this.algorithmTime.BackColor = System.Drawing.Color.Transparent;
+            this.algorithmTime.Location = new System.Drawing.Point(415, 377);
+            this.algorithmTime.Name = "algorithmTime";
+            this.algorithmTime.Size = new System.Drawing.Size(17, 20);
+            this.algorithmTime.TabIndex = 29;
+            this.algorithmTime.Text = "0";
+            this.algorithmTime.Click += new System.EventHandler(this.algorithmTime_Click);
             // 
             // label8
             // 
@@ -318,7 +318,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.hyperlink);
-            this.panel1.Controls.Add(this.algorithmtime);
+            this.panel1.Controls.Add(this.algorithmTime);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(26, 370);
@@ -388,7 +388,7 @@
         private Label label5;
         private Label label6;
         private LinkLabel hyperlink;
-        private Label algorithmtime;
+        private Label algorithmTime;
         private Label label8;
         private Panel panel1;
     }

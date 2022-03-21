@@ -3,8 +3,9 @@
     "",
     "\\sample",
     "\\sample\\test",
-    "\\src"
+    "\\src",
+    "\\src\\dagorlz"
   ],
-  "SelectedNode": "\\sample\\test\\Form1.cs",
+  "SelectedNode": "\\src\\dagorlz\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

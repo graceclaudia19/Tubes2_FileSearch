@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
         //    return !Directory.EnumerateFileSystemEntries(path).Any();
         //}
         public int unique = 0;
-        public static string[] DFS(string folderpath, string start, string fileToSearch, bool checkAllOccur, Microsoft.Msagl.Drawing.Graph graph)
+        public static string[] DFS(string start, string fileToSearch, bool checkAllOccur, Microsoft.Msagl.Drawing.Graph graph)
         {
             string[] files = Directory.GetFiles(start);
             bool found = false;
@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
                     //graph.FindNode(start).Label.Text = new DirectoryInfo(start).Name;
                     //graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
                     
-                    string[] temp = DFS(folderpath, folder, fileToSearch, checkAllOccur, graph);
+                    string[] temp = DFS(folder, fileToSearch, checkAllOccur, graph);
                     res.AddRange(temp);
 
                     if (!checkAllOccur && found)
@@ -223,13 +223,17 @@ namespace WindowsFormsApp1
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             //makeGraph(graph);
             //handleGraph(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\Test", graph);
-            string[] resultDFS = DFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", @"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "found.txt", true, graph);
-            foreach (string res in resultDFS)
+            string[] resultDFS = DFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "b.txt", false, graph);
+            //foreach (string res in resultDFS)
+            //{
+              //  Console.WriteLine(res);
+            //}
+            string[] resultBFS = BFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "b.txt", false, graph);
+            foreach (string res in resultBFS)
             {
-                Console.WriteLine(res);
+                 Console.WriteLine(res);
             }
-            createGraph(resultDFS, graph, true);
-            //string[] resultBFS = BFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "found.txt", true, graph);
+            createGraph(resultBFS, graph, false);
             viewer.Graph = graph;
             //associate the viewer with the form 
             form.SuspendLayout();
