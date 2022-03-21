@@ -153,18 +153,20 @@
             // searchBFS
             // 
             this.searchBFS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchBFS.BackColor = System.Drawing.Color.Transparent;
             this.searchBFS.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.searchBFS.Location = new System.Drawing.Point(366, 271);
             this.searchBFS.Name = "searchBFS";
             this.searchBFS.Size = new System.Drawing.Size(78, 37);
             this.searchBFS.TabIndex = 13;
             this.searchBFS.Text = "BFS";
-            this.searchBFS.UseVisualStyleBackColor = true;
+            this.searchBFS.UseVisualStyleBackColor = false;
             this.searchBFS.Click += new System.EventHandler(this.searchBFS_Click);
             // 
             // chosenDir
             // 
             this.chosenDir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchDFS.BackColor = System.Drawing.Color.Transparent;
             this.chosenDir.BackColor = System.Drawing.SystemColors.Info;
             this.chosenDir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.chosenDir.Location = new System.Drawing.Point(496, 189);
@@ -279,15 +281,19 @@
             // 
             // hyperlink
             // 
-            this.hyperlink.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.hyperlink.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.hyperlink.AutoSize = true;
-            this.hyperlink.Location = new System.Drawing.Point(349, 414);
+            this.hyperlink.Location = new System.Drawing.Point(47, 414);
             this.hyperlink.Name = "hyperlink";
             this.hyperlink.Size = new System.Drawing.Size(69, 20);
             this.hyperlink.TabIndex = 28;
             this.hyperlink.TabStop = true;
-            this.hyperlink.Text = "hyperlink";
             this.hyperlink.Visible = false;
+            this.hyperlink.LinkClicked += (s, e) =>
+            {
+                string target = (string)e.Link.LinkData;
+                System.Diagnostics.Process.Start("explorer.exe", target);
+            };
             // 
             // algorithmTime
             // 
