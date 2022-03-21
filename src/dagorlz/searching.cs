@@ -24,7 +24,7 @@ namespace dagorlz
             foreach (string file in files)
             {
                 res.Add(file);
-                if (file.Contains(fileToSearch))
+                if (file.Contains(fileToSearch) && fileToSearch == new DirectoryInfo(file).Name)
                 {
                     res.Add("?");
                     found = true;
@@ -65,7 +65,7 @@ namespace dagorlz
                 string[] files = Directory.GetFiles(startDir);
                 foreach(string file in files){
                     output.Add(file);
-                    if (file.Contains(fileToSearch)){
+                    if (file.Contains(fileToSearch) && fileToSearch == new DirectoryInfo(file).Name){
                         found = true;
                         output.Add("?");
                     }

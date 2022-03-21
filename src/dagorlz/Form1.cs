@@ -58,7 +58,7 @@ namespace dagorlz
         {
             if (this.chosenDir.BackColor == SystemColors.Info || this.inputName.BackColor == SystemColors.Info)
             {
-                MessageBox.Show("Make sure to set start directory and target filename", "BFS Search Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Make sure to set start directory and target filename", "DFS Search Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -84,17 +84,24 @@ namespace dagorlz
             }
         }
 
-        private async void handleGraph(string[] Result, bool checkAllOccur, bool BFS)
+        public class hyperlinks
         {
-            // for storing hyperlink paths
-            List<string> pathLink = new List<string>();
-            this.hyperlink.Links.Clear();
+            public string hyperlink_name { get; set; }
+            public string hyperlink_link { get; set; }
+        }
+
+        List<hyperlinks> hll = new List<hyperlinks>();
+        int id = 0;
+        private async void handleGraph(string[] Result, bool checkAllOccur, bool BFS)
+        {   
+            //clear listbox and hyperlinks
+            hll.Clear();
+            listBox1.Items.Clear();
 
             // disable related buttons, trackbar, & hyperlink
             this.searchBFS.Enabled = false;
             this.searchDFS.Enabled = false;
             this.trackBar1.Enabled = false;
-            this.hyperlink.Visible = false;
             this.algorithmTime.Text = "0";
 
             // initialize graphviewer & panel display
@@ -132,7 +139,15 @@ namespace dagorlz
                 {
                     // address temuan = sebelum ?
                     string foundfile = Result[i - 1];
-                    pathLink.Add(foundfile);
+
+                    // add hyperlink inside listbox
+                    hyperlinks link = new hyperlinks();
+                    link.hyperlink_name = foundfile;
+                    link.hyperlink_link = foundfile;
+                    listBox1.Items.Add(foundfile);
+                    id++;
+                    hll.Add(link);
+
                     graph.FindNode(startPath).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
                     graph.FindNode(foundfile).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
                     string parent = Path.GetDirectoryName(foundfile);
@@ -162,9 +177,9 @@ namespace dagorlz
                     continue;
                 }
 
+                // Bikin graph
                 string file = Result[i];
                 string root = Path.GetDirectoryName(file);
-                // Bikin graph
                 graph.AddEdge(root, file); // Bikin node antara file sama rootnya
                 if (graph.FindNode(file).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightBlue)
                 {
@@ -176,6 +191,8 @@ namespace dagorlz
                 {
                     graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
                 }
+
+                // Munculin graph
                 viewer.Graph = graph;
                 graphPanel.SuspendLayout();
                 viewer.Dock = DockStyle.Fill;
@@ -183,27 +200,7 @@ namespace dagorlz
             }
             graphPanel.ResumeLayout();
 
-            // initialize link collections
-            string allPath = "";
-            var links = new List<LinkLabel.Link>();
-
-            // create a link for each path
-            for  (int i = 0; i < pathLink.Count; i++)
-            {
-                links.Add(new LinkLabel.Link(allPath.Length, pathLink[i].Length, pathLink[i]));
-                allPath += pathLink[i] + "\n"; 
-            }
-            // set main hyperlink text
-            this.hyperlink.Text = allPath;
-
-            // add each path's link to link collections
-            foreach (var link in links)
-            {
-                this.hyperlink.Links.Add(link);
-            }
-
             // reset view
-            this.hyperlink.Visible = true;
             this.trackBar1.Enabled = true;
             this.searchBFS.Enabled = true;
             this.searchDFS.Enabled = true;
@@ -267,29 +264,20 @@ namespace dagorlz
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             panel1.BackColor = System.Drawing.Color.FromArgb(219, 228, 216);
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void hyperlink_LinkClicked(object sender, EventArgs e, Form form)
-        {
-            //var formLinks = new Form();
-
-            //formLinks.Show();
-            //Process.Start("explorer.exeee", @);
-
-            //hyperlink.LinkClicked += (s, e) => Console.WriteLine(e.Link.LinkData);
+            foreach (hyperlinks link in hll)
+            {
+                if (listBox1.SelectedItem.ToString() == link.hyperlink_link.ToString())
+                {
+                    System.Diagnostics.Process.Start("explorer.exe", link.hyperlink_link);
+                }
+            }
         }
     }
 }

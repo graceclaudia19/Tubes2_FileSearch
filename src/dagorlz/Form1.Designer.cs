@@ -47,10 +47,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.hyperlink = new System.Windows.Forms.LinkLabel();
             this.algorithmTime = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -91,10 +91,10 @@
             this.graphPanel.BackColor = System.Drawing.SystemColors.Control;
             this.graphPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.graphPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.graphPanel.Location = new System.Drawing.Point(45, 416);
+            this.graphPanel.Location = new System.Drawing.Point(19, 41);
             this.graphPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graphPanel.Name = "graphPanel";
-            this.graphPanel.Size = new System.Drawing.Size(734, 297);
+            this.graphPanel.Size = new System.Drawing.Size(734, 317);
             this.graphPanel.TabIndex = 2;
             this.graphPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.graphPanel_Paint);
             // 
@@ -144,18 +144,18 @@
             this.labelDetail3.AutoSize = true;
             this.labelDetail3.BackColor = System.Drawing.Color.Transparent;
             this.labelDetail3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDetail3.Location = new System.Drawing.Point(51, 277);
+            this.labelDetail3.Location = new System.Drawing.Point(51, 327);
             this.labelDetail3.Name = "labelDetail3";
             this.labelDetail3.Size = new System.Drawing.Size(191, 25);
             this.labelDetail3.TabIndex = 12;
-            this.labelDetail3.Text = "3. Pick search method";
+            this.labelDetail3.Text = "4. Pick search method";
             // 
             // searchBFS
             // 
             this.searchBFS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.searchBFS.BackColor = System.Drawing.Color.Transparent;
             this.searchBFS.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchBFS.Location = new System.Drawing.Point(366, 271);
+            this.searchBFS.Location = new System.Drawing.Point(364, 321);
             this.searchBFS.Name = "searchBFS";
             this.searchBFS.Size = new System.Drawing.Size(78, 37);
             this.searchBFS.TabIndex = 13;
@@ -166,7 +166,6 @@
             // chosenDir
             // 
             this.chosenDir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.searchDFS.BackColor = System.Drawing.Color.Transparent;
             this.chosenDir.BackColor = System.Drawing.SystemColors.Info;
             this.chosenDir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.chosenDir.Location = new System.Drawing.Point(496, 189);
@@ -180,8 +179,9 @@
             // searchDFS
             // 
             this.searchDFS.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchDFS.BackColor = System.Drawing.Color.Transparent;
             this.searchDFS.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchDFS.Location = new System.Drawing.Point(468, 271);
+            this.searchDFS.Location = new System.Drawing.Point(468, 321);
             this.searchDFS.Name = "searchDFS";
             this.searchDFS.Size = new System.Drawing.Size(78, 37);
             this.searchDFS.TabIndex = 15;
@@ -207,17 +207,17 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(51, 325);
+            this.label1.Location = new System.Drawing.Point(51, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 25);
             this.label1.TabIndex = 17;
-            this.label1.Text = "4. Input graph speed interval";
+            this.label1.Text = "3. Input graph speed interval";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // trackBar1
             // 
             this.trackBar1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.trackBar1.Location = new System.Drawing.Point(360, 327);
+            this.trackBar1.Location = new System.Drawing.Point(366, 282);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(309, 56);
@@ -247,7 +247,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(253, 373);
+            this.label3.Location = new System.Drawing.Point(270, 360);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 25);
             this.label3.TabIndex = 20;
@@ -260,7 +260,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(453, 373);
+            this.label5.Location = new System.Drawing.Point(470, 360);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 25);
             this.label5.TabIndex = 25;
@@ -273,34 +273,18 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(713, 327);
+            this.label6.Location = new System.Drawing.Point(728, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 25);
             this.label6.TabIndex = 27;
             this.label6.Text = "ms";
-            // 
-            // hyperlink
-            // 
-            this.hyperlink.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.hyperlink.AutoSize = true;
-            this.hyperlink.Location = new System.Drawing.Point(47, 414);
-            this.hyperlink.Name = "hyperlink";
-            this.hyperlink.Size = new System.Drawing.Size(69, 20);
-            this.hyperlink.TabIndex = 28;
-            this.hyperlink.TabStop = true;
-            this.hyperlink.Visible = false;
-            this.hyperlink.LinkClicked += (s, e) =>
-            {
-                string target = (string)e.Link.LinkData;
-                System.Diagnostics.Process.Start("explorer.exe", target);
-            };
             // 
             // algorithmTime
             // 
             this.algorithmTime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.algorithmTime.AutoSize = true;
             this.algorithmTime.BackColor = System.Drawing.Color.Transparent;
-            this.algorithmTime.Location = new System.Drawing.Point(415, 377);
+            this.algorithmTime.Location = new System.Drawing.Point(432, 364);
             this.algorithmTime.Name = "algorithmTime";
             this.algorithmTime.Size = new System.Drawing.Size(17, 20);
             this.algorithmTime.TabIndex = 29;
@@ -311,7 +295,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(679, 331);
+            this.label8.Location = new System.Drawing.Point(694, 287);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 20);
             this.label8.TabIndex = 30;
@@ -322,16 +306,30 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.graphPanel);
+            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.hyperlink);
             this.panel1.Controls.Add(this.algorithmTime);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(26, 370);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 462);
+            this.panel1.Size = new System.Drawing.Size(774, 498);
             this.panel1.TabIndex = 31;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // listBox1
+            // 
+            this.listBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(19, 397);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.listBox1.ScrollAlwaysVisible = true;
+            this.listBox1.Size = new System.Drawing.Size(734, 84);
+            this.listBox1.TabIndex = 30;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // dagorlz
             // 
@@ -339,7 +337,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(837, 853);
+            this.ClientSize = new System.Drawing.Size(837, 880);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -351,7 +349,6 @@
             this.Controls.Add(this.labelDetail2);
             this.Controls.Add(this.labelDetail1);
             this.Controls.Add(this.inputName);
-            this.Controls.Add(this.graphPanel);
             this.Controls.Add(this.checkAll);
             this.Controls.Add(this.selectDir);
             this.Controls.Add(this.panel1);
@@ -359,7 +356,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(855, 900);
+            this.MinimumSize = new System.Drawing.Size(855, 927);
             this.Name = "dagorlz";
             this.Text = "Dagorlz";
             this.Load += new System.EventHandler(this.Dagorlz_Load);
@@ -390,12 +387,11 @@
         private TrackBar trackBar1;
         private Label label2;
         private Label label3;
-        private Button button1;
         private Label label5;
         private Label label6;
-        private LinkLabel hyperlink;
         private Label algorithmTime;
         private Label label8;
         private Panel panel1;
+        private ListBox listBox1;
     }
 }
