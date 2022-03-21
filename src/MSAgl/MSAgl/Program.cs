@@ -23,25 +23,25 @@ namespace WindowsFormsApp1
             {
                 res.Add(file);
                 // Bikin graph
-                graph.AddEdge(start, file);
-                graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
-                graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name;
-                graph.FindNode(start).Label.Text = new DirectoryInfo(start).Name;
-                graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                //graph.AddEdge(start, file);
+                //graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                //graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name;
+                //graph.FindNode(start).Label.Text = new DirectoryInfo(start).Name;
+                //graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
 
                 if (file.Contains(fileToSearch))
                 {
                     res.Add("?");
                     found = true;
                     // Warnain biru
-                    string root = Path.GetDirectoryName(file);
-                    graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                    graph.FindNode(folderpath).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                    while (root != folderpath)
-                    {
-                        graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                        root = Path.GetDirectoryName(root);
-                    }
+                    //string root = Path.GetDirectoryName(file);
+                    //graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    //graph.FindNode(folderpath).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    //while (root != folderpath)
+                    //{
+                    //    graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    //    root = Path.GetDirectoryName(root);
+                    //}
                 }
             }
             if (found)
@@ -56,16 +56,16 @@ namespace WindowsFormsApp1
                     res.Add(folder);
                     
                     // Bikin graph
-                    graph.AddEdge(start, folder);
-                    graph.FindNode(folder).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
-                    graph.FindNode(folder).Label.Text = new DirectoryInfo(folder).Name;
-                    graph.FindNode(start).Label.Text = new DirectoryInfo(start).Name;
-                    graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    //graph.AddEdge(start, folder);
+                    //graph.FindNode(folder).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    //graph.FindNode(folder).Label.Text = new DirectoryInfo(folder).Name;
+                    //graph.FindNode(start).Label.Text = new DirectoryInfo(start).Name;
+                    //graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
                     
                     string[] temp = DFS(folderpath, folder, fileToSearch, checkAllOccur, graph);
                     res.AddRange(temp);
 
-                    if (!checkAllOccur)
+                    if (!checkAllOccur && found)
                     {
                         return res.ToArray();
                     }
@@ -92,25 +92,25 @@ namespace WindowsFormsApp1
                 {
                     output.Add(file);
                     // Bikin graph
-                    graph.AddEdge(startDir, file);
-                    graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
-                    graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name;
-                    graph.FindNode(startDir).Label.Text = new DirectoryInfo(startDir).Name;
-                    graph.FindNode(startDir).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    //graph.AddEdge(startDir, file);
+                    //graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    //graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name;
+                    //graph.FindNode(startDir).Label.Text = new DirectoryInfo(startDir).Name;
+                    //graph.FindNode(startDir).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
                     
                     if (file.Contains(fileToSearch))
                     {
                         found = true;
                         output.Add("?");
                         // Warnain biru
-                        string root = Path.GetDirectoryName(file);
-                        graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                        graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                        while (root != start)
-                        {
-                            graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                            root = Path.GetDirectoryName(root);
-                        }
+                        //string root = Path.GetDirectoryName(file);
+                        //graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                        //graph.FindNode(start).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                        //while (root != start)
+                        //{
+                        //    graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                        //    root = Path.GetDirectoryName(root);
+                        //}
                     }
                 }
                 if (found && !checkAllOccur)
@@ -121,11 +121,11 @@ namespace WindowsFormsApp1
                 foreach (string dir in otherDir)
                 {
                     // Bikin graph
-                    graph.AddEdge(startDir, dir);
-                    graph.FindNode(dir).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
-                    graph.FindNode(dir).Label.Text = new DirectoryInfo(dir).Name;
-                    graph.FindNode(startDir).Label.Text = new DirectoryInfo(startDir).Name;
-                    graph.FindNode(startDir).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    //graph.AddEdge(startDir, dir);
+                    //graph.FindNode(dir).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    //graph.FindNode(dir).Label.Text = new DirectoryInfo(dir).Name;
+                    //graph.FindNode(startDir).Label.Text = new DirectoryInfo(startDir).Name;
+                    //graph.FindNode(startDir).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
 
                     q.Enqueue(dir);
                 }
@@ -133,8 +133,46 @@ namespace WindowsFormsApp1
             return output.ToArray();
         }
 
+        public static void createGraph(string[] Result, Microsoft.Msagl.Drawing.Graph graph, bool checkAllOccur)
+        {
+            string startPath = Path.GetDirectoryName(Result[0]);
+            for (int i = 0; i < Result.Length - 1; i++)
+            {
 
+                // If result[i] = ?
+                if (Result[i] == "?")
+                {
+                    string foundfile = Result[i - 1];
+                    string parent = Path.GetDirectoryName(foundfile);
+                    graph.FindNode(foundfile).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    graph.FindNode(startPath).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    while (parent != startPath)
+                    {
+                        graph.FindNode(parent).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                        parent = Path.GetDirectoryName(parent);
+                    }
+                }
 
+                if (!checkAllOccur && Result[i] == "?")
+                {
+                    break;
+                }
+
+                if (checkAllOccur && Result[i] == "?")
+                {
+                    continue;
+                }
+
+                string file = Result[i];
+                string root = Path.GetDirectoryName(file);
+                // Bikin graph
+                graph.AddEdge(root, file);
+                graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name;
+                graph.FindNode(root).Label.Text = new DirectoryInfo(root).Name;
+                graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+            }
+        }
         // for testing purpose
         public static void handleGraph(string folderPath, Microsoft.Msagl.Drawing.Graph graph)
         {
@@ -185,8 +223,13 @@ namespace WindowsFormsApp1
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
             //makeGraph(graph);
             //handleGraph(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\Test", graph);
-            //string[] resultDFS = DFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", @"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "found1.txt", false, graph);
-            string[] resultBFS = BFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "found1.txt", true, graph);
+            string[] resultDFS = DFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", @"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "found.txt", true, graph);
+            foreach (string res in resultDFS)
+            {
+                Console.WriteLine(res);
+            }
+            createGraph(resultDFS, graph, true);
+            //string[] resultBFS = BFS(@"C:\Users\Rania\Desktop\SEMESTER 4\Stima\Tubes2_FileSearch\src\MSAgl\testFolder", "found.txt", true, graph);
             viewer.Graph = graph;
             //associate the viewer with the form 
             form.SuspendLayout();

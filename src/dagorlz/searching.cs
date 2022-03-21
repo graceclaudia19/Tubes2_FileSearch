@@ -43,7 +43,7 @@ namespace dagorlz
                     string[] temp = DFS(folder, fileToSearch, checkAllOccur);
                     res.AddRange(temp);
                     
-                    if (!checkAllOccur){
+                    if (!checkAllOccur && found){
                         return res.ToArray();
                     }
                 }
@@ -84,14 +84,14 @@ namespace dagorlz
 
 
         // for testing purpose
-        public static void Main(string[] args)
-        {
+        //public static void Main(string[] args)
+        //{
             // DFS testing
-            string[] resultDFS = DFS("testFolder", "found.txt", false);
-            foreach (string res in resultDFS)
-            {
-                Console.WriteLine(res);
-            }
+          //  string[] resultDFS = DFS("testFolder", "found.txt", false);
+            //foreach (string res in resultDFS)
+            //{
+            //    Console.WriteLine(res);
+            //}
 
             // // BFS testing
             // string[] resultBFS = BFS("testFolder", "found.txt", true);
@@ -99,7 +99,7 @@ namespace dagorlz
             // {
             //     Console.WriteLine(res);
             // }
-        }
+        //}
 
     }
 }

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "phQsPoJvESya9uOYhmdMZunITsC0pn1T/avax0RKF4MUy7XJNWTDyn5zYSvmS8JEnIo2YAFryj1wVCj9s4I8fA==",
+  "dgSpecHash": "CAncNlHL/cpota/k6RAOEPfTHN8rJCFyOnAy5dQdGQqQvafN4d4u7UMqeMnzSLNvhsABDkwWBYtmFxAt36XkAg==",
   "success": true,
-  "projectFilePath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
+  "projectFilePath": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\grace\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
-    "C:\\Users\\grace\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
-    "C:\\Users\\grace\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
-    "C:\\Users\\grace\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Rania\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
   ],
   "logs": []
 }

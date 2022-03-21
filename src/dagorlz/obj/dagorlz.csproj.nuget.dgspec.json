@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj": {}
+    "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj": {}
   },
   "projects": {
-    "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj": {
+    "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
+        "projectUniqueName": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
         "projectName": "dagorlz",
-        "projectPath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
-        "packagesPath": "C:\\Users\\grace\\.nuget\\packages\\",
-        "outputPath": "D:\\IF\\Semester4\\stima\\tubes2\\TUBESSSS\\Tubes2_FileSearch\\src\\dagorlz\\obj\\",
+        "projectPath": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\src\\dagorlz\\dagorlz.csproj",
+        "packagesPath": "C:\\Users\\Rania\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rania\\Desktop\\SEMESTER 4\\Stima\\Tubes2_FileSearch\\src\\dagorlz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\grace\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rania\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},

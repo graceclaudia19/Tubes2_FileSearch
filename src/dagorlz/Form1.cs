@@ -23,7 +23,7 @@ namespace dagorlz
             FolderBrowserDialog fb = new FolderBrowserDialog();
             if (fb.ShowDialog() == DialogResult.OK)
             {
-                graphPanel_Paint.Items.Clear();
+                //graphPanel_Paint.Items.Clear();
 
             }
 
@@ -31,7 +31,7 @@ namespace dagorlz
             chosenDir.BackColor = System.Drawing.SystemColors.Control;
         }
 
-        private void checkAll_CheckedChanged(object sender, EventArgs e)
+         private void checkAll_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -39,13 +39,15 @@ namespace dagorlz
         private void searchBFS_Click(object sender, EventArgs e)
         {
             searchBFS.Text = "OK";
-            createGraph();
+            string[] resultBFS = Searching.BFS(folderBrowserDialog.SelectedPath.ToString(), inputName.Text, checkAll.Checked);
+            handleGraph(resultBFS, checkAll.Checked);
         }
 
         private void searchDFS_Click(object sender, EventArgs e)
         {
             searchDFS.Text = "OK";
-            createGraph();
+            string[] resultDFS = Searching.DFS(folderBrowserDialog.SelectedPath.ToString(), inputName.Text, checkAll.Checked);
+            handleGraph(resultDFS, checkAll.Checked);
         }
 
         private void inputName_TextChanged(object sender, EventArgs e)
@@ -60,9 +62,58 @@ namespace dagorlz
             }
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        private async void handleGraph(string[] Result, bool checkAllOccur)
         {
-            createGraph();
+            graphPanel.Controls.Clear();
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            //create a graph object 
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+            string startPath = Path.GetDirectoryName(Result[0]);
+            for (int i = 0; i < Result.Length - 1; i++)
+            {
+                if (i != 0) await Task.Delay(800);
+                // If result[i] = ?
+                if (Result[i] == "?")
+                {
+                    string foundfile = Result[i - 1];
+                    string parent = Path.GetDirectoryName(foundfile);
+                    graph.FindNode(foundfile).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    graph.FindNode(startPath).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    while (parent != startPath)
+                    {
+                        graph.FindNode(parent).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                        parent = Path.GetDirectoryName(parent);
+                    }
+                }
+
+                if (!checkAllOccur && Result[i] == "?")
+                {
+                    viewer.Graph = graph;
+                    graphPanel.SuspendLayout();
+                    viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+                    graphPanel.Controls.Add(viewer);
+                    break;
+                }
+
+                if (checkAllOccur && Result[i] == "?")
+                {
+                    continue;
+                }
+
+                string file = Result[i];
+                string root = Path.GetDirectoryName(file);
+                // Bikin graph
+                graph.AddEdge(root, file);
+                graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name;
+                graph.FindNode(root).Label.Text = new DirectoryInfo(root).Name;
+                graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                viewer.Graph = graph;
+                graphPanel.SuspendLayout();
+                viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+                graphPanel.Controls.Add(viewer);
+            }
+            graphPanel.ResumeLayout();
         }
         private async void createGraph()
         {
