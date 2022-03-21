@@ -128,7 +128,6 @@ namespace dagorlz
             //loop hasil
             for (int i = 0; i < Result.Length; i++)
             {   
-                if (i != 0) await Task.Delay(this.trackBar1.Value);
                 if (BFS && i==0)
                 {
                     i = i+1;
@@ -178,6 +177,7 @@ namespace dagorlz
                 }
 
                 // Bikin graph
+                if (i != 0) await Task.Delay(this.trackBar1.Value);
                 string file = Result[i];
                 string root = Path.GetDirectoryName(file);
                 graph.AddEdge(root, file); // Bikin node antara file sama rootnya

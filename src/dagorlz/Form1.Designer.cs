@@ -247,7 +247,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(270, 360);
+            this.label3.Location = new System.Drawing.Point(283, 365);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 25);
             this.label3.TabIndex = 20;
@@ -260,7 +260,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(470, 360);
+            this.label5.Location = new System.Drawing.Point(456, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 25);
             this.label5.TabIndex = 25;
@@ -284,9 +284,10 @@
             this.algorithmTime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.algorithmTime.AutoSize = true;
             this.algorithmTime.BackColor = System.Drawing.Color.Transparent;
-            this.algorithmTime.Location = new System.Drawing.Point(432, 364);
+            this.algorithmTime.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.algorithmTime.Location = new System.Drawing.Point(431, 367);
             this.algorithmTime.Name = "algorithmTime";
-            this.algorithmTime.Size = new System.Drawing.Size(17, 20);
+            this.algorithmTime.Size = new System.Drawing.Size(19, 23);
             this.algorithmTime.TabIndex = 29;
             this.algorithmTime.Text = "0";
             this.algorithmTime.Click += new System.EventHandler(this.algorithmTime_Click);
@@ -295,6 +296,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Location = new System.Drawing.Point(694, 287);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 20);
@@ -320,6 +322,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.listBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
