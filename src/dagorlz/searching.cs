@@ -17,71 +17,100 @@ namespace dagorlz
     {
         public static string[] DFS(string start, string fileToSearch, bool checkAllOccur)
         {
-            string[] files = Directory.GetFiles(start);
+            // Initialize parameter found, stack, dan list
             bool found = false;
-            List<string> res = new List<string>();
-
-            foreach (string file in files)
-            {
-                res.Add(file);
-                if (file.Contains(fileToSearch) && fileToSearch == new DirectoryInfo(file).Name)
-                {
-                    res.Add("?");
-                    found = true;
-                }
-            }
-            if (found)
-            {
-                return res.ToArray();
-            }
-            else
-            {
-                string[] folders = Directory.GetDirectories(start);
-                foreach (string folder in folders)
-                {
-                    res.Add(folder);
-                    string[] temp = DFS(folder, fileToSearch, checkAllOccur);
-                    res.AddRange(temp);
-                    
-                    if (!checkAllOccur && found){
-                        return res.ToArray();
-                    }
-                }
-                return res.ToArray();
-            }
-        }
-
-        public static string[] BFS(string start, string fileToSearch, bool checkAllOccur){
-            bool found = false;
-            Queue<string> q = new Queue<string>();
+            Stack<string> s = new Stack<string>();
             List<string> output = new List<string>();
 
-            q.Enqueue(start);
+            // Push main dir as the first stack element
+            s.Push(start);
 
-            while(q.Count>0){
-                string startDir = q.Dequeue();
+            // loop until stack is empty
+            while (s.Count > 0)
+            {
+                // Initialize starting directory
+                string startDir = s.Pop();
                 output.Add(startDir);
 
+                // Find file
                 string[] files = Directory.GetFiles(startDir);
-                foreach(string file in files){
-                    output.Add(file);
-                    if (file.Contains(fileToSearch) && fileToSearch == new DirectoryInfo(file).Name){
+                foreach (string file in files)
+                {
+                    if (file.Contains(fileToSearch) && fileToSearch == new DirectoryInfo(file).Name)
+                    {
+                        output.Add(file);
                         found = true;
                         output.Add("?");
                     }
                 }
-                if (found && !checkAllOccur){
+
+                // File found and x all occur
+                if (found && !checkAllOccur)
+                {
+                    // Add unvisited stack to the output list
+                    for (int i = 0; i < s.Count; i++)
+                    {
+                        output.Add(s.Pop());
+                    }
                     break;
                 }
+
+                // Push all directories inside starting directory
+                string[] otherDir = Directory.GetDirectories(startDir);
+                foreach (string dir in otherDir)
+                {
+                    s.Push(dir);
+                }
+            }
+
+            return output.ToArray();
+        }
+
+        public static string[] BFS(string start, string fileToSearch, bool checkAllOccur){
+            // Initialize parameter found, queue, dan list
+            bool found = false;
+            Queue<string> q = new Queue<string>();
+            List<string> output = new List<string>();
+
+            // Enqueue main dir as the first stack element
+            q.Enqueue(start);
+
+            // loop until queue is empty
+            while (q.Count>0){
+                // Initialize starting directory
+                string startDir = q.Dequeue();
+                output.Add(startDir);
+
+                // find file
+                string[] files = Directory.GetFiles(startDir);
+                foreach(string file in files){
+                    if (file.Contains(fileToSearch) && fileToSearch == new DirectoryInfo(file).Name){
+                        output.Add(file);
+                        found = true;
+                        output.Add("?");
+                    }
+                }
+
+                // File found and x all occur
+                if (found && !checkAllOccur)
+                {
+                    // Add unvisited queue to the output list
+                    for (int i = 0; i < q.Count(); i++)
+                    {
+                        output.Add(q.Dequeue());
+                    }
+                    break;
+                }
+
+                // Enqueue all directories inside starting directory
                 string[] otherDir = Directory.GetDirectories(startDir);
                 foreach (string dir in otherDir){
                     q.Enqueue(dir);
                 }
             }
+
             return output.ToArray();
         }
-
-
 
         // for testing purpose
         //public static void Main(string[] args)

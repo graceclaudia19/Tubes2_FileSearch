@@ -23,6 +23,7 @@ namespace dagorlz
 
         private void selectDir_Click(object sender, EventArgs e)
         {
+            // Mengganti warna & teks pada textbox chosen directory
             if (this.folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 chosenDir.Text = folderBrowserDialog.SelectedPath.ToString();
@@ -38,6 +39,7 @@ namespace dagorlz
 
         private void searchBFS_Click(object sender, EventArgs e)
         {
+            // Special case (directory/file empty)
             if (this.chosenDir.BackColor == SystemColors.Info || this.inputName.BackColor == SystemColors.Info)
             {
                 MessageBox.Show("Make sure to set start directory and target filename", "BFS Search Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -56,6 +58,7 @@ namespace dagorlz
 
         private void searchDFS_Click(object sender, EventArgs e)
         {
+            // Special case (directory/file empty)
             if (this.chosenDir.BackColor == SystemColors.Info || this.inputName.BackColor == SystemColors.Info)
             {
                 MessageBox.Show("Make sure to set start directory and target filename", "DFS Search Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -84,14 +87,15 @@ namespace dagorlz
             }
         }
 
+        // Class for hyperlinks
         public class hyperlinks
         {
             public string hyperlink_name { get; set; }
             public string hyperlink_link { get; set; }
         }
 
+        // Create list of hyperlinks
         List<hyperlinks> hll = new List<hyperlinks>();
-        int id = 0;
         private async void handleGraph(string[] Result, bool checkAllOccur, bool BFS)
         {   
             //clear listbox and hyperlinks
@@ -102,6 +106,8 @@ namespace dagorlz
             this.searchBFS.Enabled = false;
             this.searchDFS.Enabled = false;
             this.trackBar1.Enabled = false;
+            this.listBox1.Visible = true;
+            this.listBox1.Enabled = true;
             this.algorithmTime.Text = "0";
 
             // initialize graphviewer & panel display
@@ -112,31 +118,20 @@ namespace dagorlz
             viewer.OutsideAreaBrush = System.Drawing.Brushes.White;
             viewer.Size = graphPanel.Size;
 
-            //create a graph object 
+            // create a graph object 
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
 
-            //startpath = direktori utama
-            string startPath;
-            if (BFS)
-            {
-                startPath = Result[0];
-            } else
-            {
-                startPath = Path.GetDirectoryName(Result[0]);
-            }
+            // startpath = main directory
+            string startPath = Result[0];
 
-            //loop hasil
-            for (int i = 0; i < Result.Length; i++)
+            // loop
+            for (int i = 1; i < Result.Length; i++)
             {   
-                if (BFS && i==0)
-                {
-                    i = i+1;
-                }
 
-                // If result[i] = ?
+                // if result[i] = ?
                 if (Result[i] == "?")
                 {
-                    // address temuan = sebelum ?
+                    // path = before ?
                     string foundfile = Result[i - 1];
 
                     // add hyperlink inside listbox
@@ -144,13 +139,14 @@ namespace dagorlz
                     link.hyperlink_name = foundfile;
                     link.hyperlink_link = foundfile;
                     listBox1.Items.Add(foundfile);
-                    id++;
                     hll.Add(link);
 
+                    // change path color
                     graph.FindNode(startPath).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
                     graph.FindNode(foundfile).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                    graph.FindNode(foundfile).Attr.LineWidth = 2;
                     string parent = Path.GetDirectoryName(foundfile);
-                    // loop ke atas ngewarnain biru
+                    // loop to the main directory
                     while (parent != startPath)
                     {
                         graph.FindNode(parent).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
@@ -158,41 +154,59 @@ namespace dagorlz
                     }
                 }
 
-                // cuma nyari 1 aja dan udah ketemu i pertama
+                // not all occur and file has been found
                 if (!checkAllOccur && Result[i] == "?")
-                {
-                    // tampilin ke layar
+                {   
+                    // print unvisited directory
+                    for (int j = i+1; j < Result.Length; j++)
+                    {
+                        string folderuv = Result[j];
+                        string rootuv = Path.GetDirectoryName(folderuv);
+                        graph.AddEdge(rootuv, folderuv); // Create node
+                        if (graph.FindNode(folderuv).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightBlue && graph.FindNode(folderuv).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightSalmon)
+                        {
+                            graph.FindNode(folderuv).Attr.FillColor = Microsoft.Msagl.Drawing.Color.White;
+                        }
+                        graph.FindNode(folderuv).Label.Text = new DirectoryInfo(folderuv).Name; // Change node name to folder name
+                        graph.FindNode(rootuv).Label.Text = new DirectoryInfo(rootuv).Name; // Change node name to root name
+                        if (graph.FindNode(rootuv).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightBlue && graph.FindNode(rootuv).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightSalmon)
+                        {
+                            graph.FindNode(rootuv).Attr.FillColor = Microsoft.Msagl.Drawing.Color.White;
+                        }
+                    }
+
+                    // show
                     viewer.Graph = graph;
                     graphPanel.SuspendLayout();
                     viewer.Dock = DockStyle.Fill;
                     graphPanel.Controls.Add(viewer);
-                    // Keluar
+                    // quit
                     break;
                 }
 
-                // nyari semuanya dan result[i] = 0, lanjut
+                // find all occur and result[i] = ?, lanjut
                 if (checkAllOccur && Result[i] == "?")
                 {
                     continue;
                 }
 
-                // Bikin graph
+                // create new edge
                 if (i != 0) await Task.Delay(this.trackBar1.Value);
-                string file = Result[i];
-                string root = Path.GetDirectoryName(file);
-                graph.AddEdge(root, file); // Bikin node antara file sama rootnya
-                if (graph.FindNode(file).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightBlue)
+                string folder = Result[i];
+                string root = Path.GetDirectoryName(folder);
+                graph.AddEdge(root, folder); // Create node
+                if (graph.FindNode(folder).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightBlue)
                 {
-                    graph.FindNode(file).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
+                    graph.FindNode(folder).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
                 }
-                graph.FindNode(file).Label.Text = new DirectoryInfo(file).Name; //ganti textnya jadi nama file
-                graph.FindNode(root).Label.Text = new DirectoryInfo(root).Name; //ganti textnya jadi nama root
+                graph.FindNode(folder).Label.Text = new DirectoryInfo(folder).Name; // Change node name to folder name
+                graph.FindNode(root).Label.Text = new DirectoryInfo(root).Name; // Change node name to root name
                 if (graph.FindNode(root).Attr.FillColor != Microsoft.Msagl.Drawing.Color.LightBlue)
                 {
                     graph.FindNode(root).Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightSalmon;
                 }
 
-                // Munculin graph
+                // show
                 viewer.Graph = graph;
                 graphPanel.SuspendLayout();
                 viewer.Dock = DockStyle.Fill;

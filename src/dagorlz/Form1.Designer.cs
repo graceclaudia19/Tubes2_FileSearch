@@ -323,6 +323,7 @@
             // listBox1
             // 
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.listBox1.Enabled = false;
             this.listBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
@@ -332,6 +333,7 @@
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(734, 84);
             this.listBox1.TabIndex = 30;
+            this.listBox1.Visible = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // dagorlz
