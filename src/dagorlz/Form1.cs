@@ -289,7 +289,8 @@ namespace dagorlz
             {
                 if (listBox1.SelectedItem.ToString() == link.hyperlink_link.ToString())
                 {
-                    System.Diagnostics.Process.Start("explorer.exe", link.hyperlink_link);
+                    string parent = Path.GetDirectoryName(link.hyperlink_link.ToString());
+                    System.Diagnostics.Process.Start("explorer.exe", parent);
                 }
             }
         }

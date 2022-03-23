@@ -46,10 +46,11 @@ namespace dagorlz
 
                 // File found and x all occur
                 if (found && !checkAllOccur)
-                {
+                {   
                     // Add unvisited stack to the output list
-                    for (int i = 0; i < s.Count; i++)
-                    {
+                    int count = s.Count;
+                    for (int i = 0; i < count; i++)
+                    { 
                         output.Add(s.Pop());
                     }
                     break;
@@ -61,6 +62,7 @@ namespace dagorlz
                 {
                     s.Push(dir);
                 }
+
             }
 
             return output.ToArray();
@@ -95,7 +97,8 @@ namespace dagorlz
                 if (found && !checkAllOccur)
                 {
                     // Add unvisited queue to the output list
-                    for (int i = 0; i < q.Count(); i++)
+                    int count = q.Count();
+                    for (int i = 0; i < count; i++)
                     {
                         output.Add(q.Dequeue());
                     }
@@ -112,15 +115,15 @@ namespace dagorlz
             return output.ToArray();
         }
 
-        // for testing purpose
+        //for testing purpose
         //public static void Main(string[] args)
         //{
             // DFS testing
-          //  string[] resultDFS = DFS("testFolder", "found.txt", false);
-            //foreach (string res in resultDFS)
-            //{
+            // string[] resultDFS = DFS("2", "found.txt", false);
+            // foreach (string res in resultDFS)
+            // {
             //    Console.WriteLine(res);
-            //}
+            // }
 
             // // BFS testing
             // string[] resultBFS = BFS("testFolder", "found.txt", true);

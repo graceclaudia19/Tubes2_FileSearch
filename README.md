@@ -2,7 +2,7 @@
 > GUI-based folder crawler to find a certain file
 
 ## Introduction
-> Dagorlz folder crawler is a lalalala
+Dagorlz folder crawler is a lalalala
 
 ## Creator
 | |
