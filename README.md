@@ -3,12 +3,9 @@
 > GUI-based folder crawler to find a certain file
 
 ## Introduction
-<<<<<<< HEAD
 ---
 > Dagorlz folder crawler is an app to search certain file in folder that is given by the user. Methodology used by this folder crawler implements BFS and DFS algorithm. Moreover, it can also search for all occurence on the file in the folder that is given.
 =======
-Dagorlz folder crawler is a lalalala
->>>>>>> 3b1f8b6011512f95da945bfff9591c3f1dfaaaba
 
 ## Creator
 ---
