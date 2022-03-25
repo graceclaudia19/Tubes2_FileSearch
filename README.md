@@ -48,3 +48,5 @@ dagorlz.sln
  file in 
 ./src/dagorlz/
  with Visual Studio
+ 
+ link to our video on youtube: http://bit.ly/DagorlzTheExplorer
